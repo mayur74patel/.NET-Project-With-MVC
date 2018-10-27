@@ -1,0 +1,58 @@
+﻿@model WebApplication9.Models.State
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>State</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.StateName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StateName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ElectionId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ElectionId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ElectionDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ElectionDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ResultDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ResultDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Seats)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Seats)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.StateId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

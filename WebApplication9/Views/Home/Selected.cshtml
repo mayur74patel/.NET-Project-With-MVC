@@ -1,0 +1,70 @@
+﻿@model IEnumerable<WebApplication9.Models.Politics>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+<table class="table">
+    <tr>
+        <th>
+           StateName
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.VordId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.VordName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PolitianName1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PolitianParty1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PolitianName2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PolitianParty2)
+        </th>
+        <th>
+            Win
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @ViewBag.message
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.VordId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.VordName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PolitianName1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PolitianParty1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PolitianName2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PolitianParty2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PolitianResult)
+            </td>
+            <td>
+                @Html.ActionLink("Detailss", "Detailss", new { id = item.PoliticsId }) |
+               </td>
+        </tr>
+    }
+
+</table>

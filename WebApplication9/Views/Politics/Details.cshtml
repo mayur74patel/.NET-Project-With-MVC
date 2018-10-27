@@ -1,0 +1,82 @@
+﻿@model WebApplication9.Models.Politics
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Politics</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.StateId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StateId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VordId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VordId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VordName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VordName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PolitianName1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PolitianName1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PolitianParty1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PolitianParty1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PolitianName2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PolitianName2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PolitianParty2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PolitianParty2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PolitianResult)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PolitianResult)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.PoliticsId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

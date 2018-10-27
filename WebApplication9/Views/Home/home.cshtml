@@ -1,0 +1,29 @@
+﻿@model IEnumerable<WebApplication9.Models.Election>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ElectionType)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+              @Html.DisplayFor(modelItem => item.ElectionType)
+            </td>
+            <td>
+                @Html.ActionLink("Details", "Details", new { id = item.ElectionId })
+                @Html.ActionLink("Select", "Select", new { id = item.ElectionId })
+            </td>
+        </tr>
+    }
+
+</table>

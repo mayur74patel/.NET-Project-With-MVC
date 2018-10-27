@@ -1,0 +1,86 @@
+﻿@model IEnumerable<WebApplication9.Models.Politics>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+
+@using (Html.BeginForm("Index", "Politics", FormMethod.Post))
+{
+    <div class="form-group">
+        Search By Name:
+        <input id="searchString" name="searchString" type="textbox" class="form-control" />
+
+        <input id="Submit" type="submit" value="Filter" class="form-control" style="margin-top: -34px;margin-left: 27%;width: 72px;"/>
+    </div>
+}
+<table class="table">
+    <tr>
+        <th>
+           State Name
+        </th>
+        <th>
+            @Html.ActionLink("VordId", "Index", new { sortOrder = ViewBag.VordId })
+        </th>
+        <th>
+            @Html.ActionLink("VordName", "Index", new { sortOrder = ViewBag.VordName })
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PolitianName1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PolitianParty1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PolitianName2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PolitianParty2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PolitianResult)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                Gujarat
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.VordId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.VordName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PolitianName1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PolitianParty1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PolitianName2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PolitianParty2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PolitianResult)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.PoliticsId }) |
+                @Html.ActionLink("Details", "Details", new { id = item.PoliticsId }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.PoliticsId })
+            </td>
+        </tr>
+    }
+
+</table>
